@@ -1,0 +1,104 @@
+/* table css */
+
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 0;
+    width: 98%;
+    table-layout: fixed;
+  }
+
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+
+  table tr {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+
+  table th,
+  table td {
+    padding: .625em;
+    text-align: left;
+  }
+
+
+  table td a {
+    text-decoration: none;
+  }
+
+ th.narrow,  td.narrow {
+    width: 11%;
+    text-align: center;
+  }
+
+  th.mid,  td.mid {
+    width: 20%;
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  th.wide,  td.wide {
+    width: 50%;
+    font-size: 1.2em;
+  }
+
+  td.isUp {
+    color: #27a527;
+  }
+  td.isDown {
+    color: #a72323;
+  }
+  table.summary {
+    width: 450px;
+    padding-top: 120px;
+    margin: auto;
+}
+table.summary  th {
+  font-size: 0.8em;
+  letter-spacing: .1em;
+  text-align:center;
+}
+table.summary td {
+  text-align:center;
+  padding: 20px 0px;
+}
+
+
+  table th {
+    font-size: 1.0em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background-color: rgb(78, 99, 124);
+    color: #fff;
+  }
+
+  table.sortable th {
+    cursor: pointer;
+  }
+
+
+  table.sortable tbody tr:nth-child(2n) td {
+    background: #ffffff;
+  }
+
+  table.sortable tbody tr:nth-child(2n+1) td {
+    background: #f0f5f5;
+  }
+
+  @media screen and (max-width: 600px) {
+
+  th.wide,  td.wide {
+    display: none;
+  }
+
+  table.summary {
+    width: 98%;
+    margin: auto;
+}
+
+}

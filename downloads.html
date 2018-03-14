@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="icon" href="./images/logo.png" sizes="16x16" type="image/png">
+
+    <link href="./css/site.css" rel="stylesheet">
+    <link href="./css/menu.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/menu.js"></script>
+
+    <script type="text/javascript" src="./js/coin.js"></script>
+    <script type="text/javascript" src="./js/sortable.js"></script>
+    <link href="./css/tables.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="pageouter">
+        <div class="pageinner">
+        
+            <!-- set the active menu to match the page -->
+            <div class="topnav-outer">
+                <div class="topnav" id="myTopnav">
+                    <a href="./prices.html" class="active"><img src='./images/svg/price.svg' class='menuimg'> Prices</a>
+                    <a href="./watchlist.html"><img src='./images/svg/watch.svg' class='menuimg'> Watchlist</a>
+                    <a href="./downloads.html"><img src='./images/svg/download.svg' class='menuimg'> Downloads</a>
+                    <a href="./settings.html"><img src='./images/svg/setting.svg' class='menuimg'> Settings</a>
+                    <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+                    <img src="./images/logo.png" class="logo">
+                </div>
+            </div>
+
+<div class="pageheader container">
+    <div class="fleft">Settings</div>
+    <div class="fright" style="vertical-align:middle; padding:auto;">
+        <img src="./images/logo.png" style="width:60px; vertical-align:middle;">
+    </div>
+</div>
+
+<!-- hidden loading gif -->
+<div class="section" id="spinner" style="display:none; text-align:center;">
+    <img src="./images/loader.gif">
+</div>
+
+<!-- hidden loading gif kit-->
+<div class="section" id="spinner" style="display:none; text-align:center;">
+    <img src="./images/loader.gif">
+</div>
+
+
+<!-- popup kit -->
+<div id="popup1" class="overlay" style="display:none;">
+	<div class="popup">
+		<h2>Coin Data</h2>
+		<a class="closemodal" href="#">&times;</a>
+		<div class="content" id="coindata">
+	put the coin specific stuff here.
+		</div>
+	</div>
+</div>
+<!-- popup kit -->
+
+
+
+<div class="w3-container">
+
+
+
+
+<div class="section">
+    <div style="padding: 0px 5px; float:left; min-width:350px; line-height:22px;">
+<h3>Download This Site</h3>
+<a href="./downloads/menu_source.zip"><img src='./images/zip.png' class = "img40"></a>
+<p>All source and .kit files for this site. Includes HTML, CSS and JavaScript files for a recent version (usually the version you are looking at). None of the coin images are included however.</p>
+    </div>
+
+</div>
+
+<div class="section">
+    <div style="padding: 0px 10px; float:left; min-width:200px; line-height:22px;">
+<h3>Download Coin Images</h3>
+    <a href="./downloads/logos.zip"><img src='./images/zip.png' class = "img40"></a>
+    <p>Includes svg and png; colour and monochrome. <br> Size 32x32 colour is the full set which is topped up from coin market cap website occassionaly. 
+    This a creative commons licence thing (see github) - details are included in the download.</p>
+
+    </div>
+</div>
+
+<div class="section">
+    <div style="padding: 0px 10px; float:left; min-width:200px; line-height:22px;">
+<h3>More coming soon!</h3>
+    <p>As new features are added, updated and version controlled source will be available here..</p>
+
+    </div>
+</div>
+
+<!-- something at the bottom -->
+<div class="section-last">
+    <p>
+        <a href="https://coinmarketcap.com/api/">Data provided by CoinMarketCap </a>
+    </p>
+</div>
+
+
+</div>
+
+
+
+<!-- page content above this line -->
+<div id="footer"></div>
+    </div>
+    </div>
+    <script>addfooter();</script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!-- @import '../kits/_head.kit' -->
+<!-- @import '../kits/_menu.kit' -->
+
+<div class="pageheader container">
+    <div class="fleft">Settings</div>
+    <div class="fright" style="vertical-align:middle; padding:auto;">
+        <img src="./images/logo.png" style="width:60px; vertical-align:middle;">
+    </div>
+</div>
+
+<!-- hidden loading gif -->
+<div class="section" id="spinner" style="display:none; text-align:center;">
+    <img src="./images/loader.gif">
+</div>
+
+<!-- @import '../kits_section/_loader.kit' -->
+<!-- @import '../kits_section/_popup.kit' -->
+
+<div class="w3-container">
+
+
+<div class="section">
+    <div style="float:left">
+        <h4>
+            <strong>Auto Refresh </strong>
+        </h4>
+        <button class="btngreen" type="">Start</button>
+        <button class="btnred" type="submit">Stop</button>
+    </div>
+
+    <div style="padding: 0px 5px; float:left; min-width:350px; line-height:22px;">
+        <h4>   <strong>Interval (Minutes)</strong>    </h4>
+
+        <input class="radio" type="radio" id="interval1" name="global_interval" value="300000"  onclick="changesettings('global_interval')">
+        <label for="interval1" class="radiolabel">1 m</label>
+
+        <input class="radio" type="radio" id="interval2" name="global_interval" value="600000" onclick="changesettings('global_interval')">
+        <label for="interval2" class="radiolabel">2 m</label>
+
+        <input class="radio" type="radio" id="interval3" name="global_interval" value="1500000" onclick="changesettings('global_interval')">
+        <label for="interval3" class="radiolabel">5 m</label>
+
+        <input class="radio" type="radio" id="interval4" name="global_interval" value="3000000" onclick="changesettings('global_interval')">
+        <label for="interval4" class="radiolabel">10 m</label>
+    </div>
+<script>setdefault('global_interval'); </script>
+</div>
+
+
+
+<div class="section">
+    <div style="padding: 0px 5px; float:left; min-width:350px; line-height:22px;">
+        <h4>     <strong>Number of coins to load, by Market CAP</strong>      </h4>
+        <p>The master coin list </p>
+        <input class="radio" type="radio" id="limit1" name="global_num" value="0" onclick="changesettings('global_num')">
+        <label for="limit1" class="radiolabel">All</label>
+
+        <input class="radio" type="radio" id="limit2" name="global_num" value="50" onclick="changesettings('global_num')">
+        <label for="limit2" class="radiolabel">50</label>
+
+        <input class="radio" type="radio" id="limit3" name="global_num" value="100" onclick="changesettings('global_num')">
+        <label for="limit3" class="radiolabel">100</label>
+
+        <input class="radio" type="radio" id="limit4" name="global_num" value="200" onclick="changesettings('global_num')">
+        <label for="limit4" class="radiolabel">200</label>
+    </div>
+    <script>setdefault('global_num'); </script>
+
+    <div style="padding: 0px 10px; float:left; min-width:200px; line-height:22px;">
+        <h4><strong>Include Icons?</strong>        </h4>
+        <p>For the all coins table, if you load too many coins it can slow down on mobile devices.</p>
+        <input class="radio" type="radio" id="global_allicons2" name="global_allicons" value="1" onclick="changesettings('global_allicons')">
+        <label for="global_allicons2" class="radiolabel">Yes</label>
+        <input class="radio" type="radio" id="global_allicons1" name="global_allicons" value="-1" onclick="changesettings('global_allicons')">
+        <label for="global_allicons1" class="radiolabel">No</label>
+    </div>
+        <script>setdefault('global_allicons'); </script>
+</div>
+
+
+<div class="section">
+    <div style="padding: 0px 5px; float:left; min-width:350px; line-height:22px;">
+        <h4>
+            <strong>Shortlists</strong>
+        </h4>
+        <p>How many to include in the Top risers, fallers and Market Cap Lists</p>
+        <input class="radio" type="radio" id="smallnum1" name="global_smallnum" value="10" onclick="changesettings('global_smallnum')">
+        <label for="smallnum1" class="radiolabel">10</label>
+        <input class="radio" type="radio" id="smallnum2" name="global_smallnum" onclick="changesettings('global_smallnum')" value="15">
+        <label for="smallnum2" class="radiolabel">15</label>
+        <input class="radio" type="radio" id="smallnum3" name="global_smallnum" onclick="changesettings('global_smallnum')" value="20">
+        <label for="smallnum3" class="radiolabel">20</label>
+    </div>
+        <script>setdefault('global_smallnum'); </script>
+
+    <div style="padding: 0px 10px; float:left; min-width:200px; line-height:22px;">
+        <h4><strong>Include Icons?</strong>        </h4>
+        <p>Show icons in the small tables?</p>
+        <input class="radio" type="radio" id="global_allicons2" name="global_icons" value="1" onclick="changesettings('global_icons')">
+        <label for="global_allicons2" class="radiolabel">Yes</label>
+        <input class="radio" type="radio" id="global_allicons1" name="global_icons" value="-1" onclick="changesettings('global_icons')">
+        <label for="global_allicons1" class="radiolabel">No</label>
+    </div>
+        <script>setdefault('global_icons'); </script>
+</div>
+
+<div class="section">
+    <div style="padding: 0px 5px; float:left; min-width:200px; line-height:22px;">
+        <h4>            <strong>Currency?</strong>        </h4>
+        <p>Prices and market CAP are shown in USD by default</p>
+        <input class="radio" type="radio" id="allicons2" name="global_currency" value="USD"  onclick="changesettings('global_currency')">
+        <label for="useusd" class="radiolabel">USD</label>
+
+        <input class="radio" type="radio" id="useaud" name="global_currency" value="AUD" onclick="changesettings('global_currency')">
+        <label for="useaud" class="radiolabel">AUD</label>
+        <script>setdefault('global_currency'); </script>
+    </div>
+</div>
+
+<!-- something at the bottom -->
+<div class="section-last">
+    <p>
+        <a href="https://coinmarketcap.com/api/">Data provided by CoinMarketCap </a>
+    </p>
+</div>
+</div>
+<!-- @import '../kits/_tail.kit' -->

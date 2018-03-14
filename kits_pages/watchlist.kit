@@ -1,0 +1,32 @@
+<!-- @import '../kits/_head.kit' -->
+<!-- @import '../kits/_menu.kit' -->
+
+<div class="pageheader container">
+    <div class="fleft">Watchlist</div>
+    <div class="fright">
+            <button onclick="watchlist();"><img src="./images/reload.png" style="height:30px"></button>
+    </div>
+</div>
+
+<!-- @import '../kits_section/_loader.kit' -->
+<!-- @import '../kits_section/_popup.kit' -->
+
+<div class="w3-container">
+<div class="section section">
+    <div id="watchlisttbl"></div>
+</div>
+
+<div class="section">
+<h4>Add or Remove coins: enter the ticker code:</h4>
+    <input type="text" class="coininputbox" id="candidate"/>
+        <button class="btngreen" onclick="add_coin()"> + </button>
+    <button class="btnred" onclick="remove_coin()"> - </button>
+</div>
+
+</div>
+<script>watchlist();</script>
+
+<!-- something at the bottom -->
+<div class="section-last"><p><a href="https://coinmarketcap.com/api/">Data provided by CoinMarketCap </a></p></div>
+</div>
+<!-- @import '../kits/_tail.kit' -->

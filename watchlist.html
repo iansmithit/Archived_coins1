@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="icon" href="./images/logo.png" sizes="16x16" type="image/png">
+
+    <link href="./css/site.css" rel="stylesheet">
+    <link href="./css/menu.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/menu.js"></script>
+
+    <script type="text/javascript" src="./js/coin.js"></script>
+    <script type="text/javascript" src="./js/sortable.js"></script>
+    <link href="./css/tables.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="pageouter">
+        <div class="pageinner">
+        
+            <!-- set the active menu to match the page -->
+            <div class="topnav-outer">
+                <div class="topnav" id="myTopnav">
+                    <a href="./prices.html" class="active"><img src='./images/svg/price.svg' class='menuimg'> Prices</a>
+                    <a href="./watchlist.html"><img src='./images/svg/watch.svg' class='menuimg'> Watchlist</a>
+                    <a href="./downloads.html"><img src='./images/svg/download.svg' class='menuimg'> Downloads</a>
+                    <a href="./settings.html"><img src='./images/svg/setting.svg' class='menuimg'> Settings</a>
+                    <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+                    <img src="./images/logo.png" class="logo">
+                </div>
+            </div>
+
+<div class="pageheader container">
+    <div class="fleft">Watchlist</div>
+    <div class="fright">
+            <button onclick="watchlist();"><img src="./images/reload.png" style="height:30px"></button>
+    </div>
+</div>
+
+<!-- hidden loading gif kit-->
+<div class="section" id="spinner" style="display:none; text-align:center;">
+    <img src="./images/loader.gif">
+</div>
+
+
+<!-- popup kit -->
+<div id="popup1" class="overlay" style="display:none;">
+	<div class="popup">
+		<h2>Coin Data</h2>
+		<a class="closemodal" href="#">&times;</a>
+		<div class="content" id="coindata">
+	put the coin specific stuff here.
+		</div>
+	</div>
+</div>
+<!-- popup kit -->
+
+
+
+<div class="w3-container">
+<div class="section section">
+    <div id="watchlisttbl"></div>
+</div>
+
+<div class="section">
+<h4>Add or Remove coins: enter the ticker code:</h4>
+    <input type="text" class="coininputbox" id="candidate"/>
+        <button class="btngreen" onclick="add_coin()"> + </button>
+    <button class="btnred" onclick="remove_coin()"> - </button>
+</div>
+
+</div>
+<script>watchlist();</script>
+
+<!-- something at the bottom -->
+<div class="section-last"><p><a href="https://coinmarketcap.com/api/">Data provided by CoinMarketCap </a></p></div>
+</div>
+
+
+
+<!-- page content above this line -->
+<div id="footer"></div>
+    </div>
+    </div>
+    <script>addfooter();</script>
+</body>
+
+</html>

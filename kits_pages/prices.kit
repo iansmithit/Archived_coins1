@@ -1,0 +1,88 @@
+<!-- @import '../kits/_head.kit' -->
+<!-- @import '../kits/_menu.kit' -->
+
+<div class="pageheader container">
+    <div class="fleft">Prices</div>
+    <div class="fright">
+            <div id="markethealth" class="health" style="float:left; overflow: hidden"></div>
+            <button onclick="loadalltables();"><img src="./images/reload.png" style="height:30px"></button>
+    </div>
+</div>
+
+<!-- hidden loading gif -->
+<div class="section" id="spinner" style="display:none; text-align:center;">
+    <img src="./images/loader.gif">
+</div>
+
+<!-- @import '../kits_section/_loader.kit' -->
+<!-- @import '../kits_section/_popup.kit' -->
+
+
+
+<!-- the tabs -->
+<div class="w3-container section-plain">
+    <div class="w3-row">
+        <a href="javascript:void(0)" onclick="openprice(event, 'Top10');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding  w3-border-red">CAP</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openprice(event, 'BigUp');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Rising</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openprice(event, 'BigDown');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Falling</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openprice(event, 'ShowAll');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">All</div>
+        </a>
+    </div>
+
+
+    <!-- the tabs -->
+
+    <div id="Top10" class="w3-container price">
+            <div class="section-first">
+            <h2 id="Top10Tablelbl">Top 10 by Market Cap</h2>
+                    <div class="section">
+                <div id="Top10Table"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="BigUp" class="w3-container price" style="display:none">
+            <div class="section-first">
+            <h2 id="BigUplbl">Top 10 Risers in 1 Hour</h2>
+                                <div class="section">
+            <div id="BigUpTable"></div>
+        </div>
+    </div>
+</div>
+
+<div id="BigDown" class="w3-container price" style="display:none">
+            <div class="section-first">
+        <h2 id="BigDownlbl">Top 10 Fallers in 1 hour</h2>
+                            <div class="section">
+        <div id="BigDownTable"></div>
+    </div>
+</div>
+</div>
+
+<div id="ShowAll" class="w3-container price" style="display:none">
+            <div class="section-first">
+        <h2 id="AllCoinlbl">All Coins</h2>
+        <div class="">
+            <input type="text" onfocus="this.value=''" id="myInput" onkeyup="searchtable()" placeholder="Search for names.." title="Type in a name">
+        </div>                    <div class="section">
+        <div id="AllCoinsTable"> </div>
+    </div>
+</div>
+
+
+<script>
+        loadalltables();
+</script>
+
+<!-- something at the bottom -->
+<div class="section-last"><p><a href="https://coinmarketcap.com/api/">Data provided by CoinMarketCap </a></p></div>
+</div>
+
+<!-- @import '../kits/_tail.kit' -->
